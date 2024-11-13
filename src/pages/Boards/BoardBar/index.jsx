@@ -13,7 +13,7 @@ function BoardBar() {
     >
       Board Bar
     </Box>
-  );
+  )
 }
 
 export default BoardBar
