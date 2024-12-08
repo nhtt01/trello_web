@@ -30,8 +30,8 @@ function AppBar() {
       <Box sx={{ display: 'flex', alignItems: 'center', gap:2 }}>
         <AppsIcon sx={{ color:'primary.main' }}/>
         <Box sx={{ display: 'flex', alignItems: 'center', gap:0.5 }}>
-          <SvgIcon component={TrelloIcon} inheritViewBox sx={{ color:'primary.main' }}/>
-          <Typography variant='span' sx={{fontSize:'1.5rem', fontWeight:'bold', color:'primary.main'}}>Trello</Typography>
+          <SvgIcon component={TrelloIcon} inheritViewBox fontSize="small" sx={{ color:'primary.main' }}/>
+          <Typography variant='span' sx={{ fontSize:'1.5rem', fontWeight:'bold', color:'primary.main' }}>Trello</Typography>
         </Box>
         <WorkSpace/>
         <Recent/>

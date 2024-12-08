@@ -5,6 +5,27 @@ const theme = extendTheme({
     appBarHeight: '58px',
     boardBarHeight: '60px'
   },
+  components: {
+    // Name of the component
+    MuiButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          textTransform:'none'
+        }
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          textTransform:'none'
+        }
+      }
+    }
+  },
   colorSchemes: {
     light: {
       palette: {

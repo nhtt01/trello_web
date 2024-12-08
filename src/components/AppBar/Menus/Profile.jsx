@@ -44,7 +44,7 @@ function Profile() {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button-profile',
+          'aria-labelledby': 'basic-button-profile'
         }}
       >
         <MenuItem onClick={handleClose}>
