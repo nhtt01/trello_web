@@ -1,28 +1,43 @@
+import { BorderColor } from '@mui/icons-material'
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
-
 const theme = extendTheme({
-  trelloCustom:{
+  trelloCustom: {
     appBarHeight: '58px',
     boardBarHeight: '60px'
   },
   components: {
-    // Name of the component
     MuiButton: {
       styleOverrides: {
-        // Name of the slot
         root: {
-          // Some CSS
-          textTransform:'none'
+          textTransform: 'none'
         }
+      }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main,
+          fontSize: '0.875rem'
+        })
       }
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        // Name of the slot
-        root: {
-          // Some CSS
-          textTransform:'none'
-        }
+        root: ({ theme }) => ({
+          color: theme.palette.primary.main,
+          fontSize: '0.875rem',
+          '.MuiOutlinedInput-notchedOutline': {
+            borderColor: theme.palette.primary.light
+          },
+          '&:hover':{
+            '.MuiOutlinedInput-notchedOutline': {
+              borderColor: theme.palette.primary.main
+            }
+          },
+          '& fieldset':{
+            borderWidth: '1px !important'
+          }
+        })
       }
     }
   },
@@ -30,17 +45,16 @@ const theme = extendTheme({
     light: {
       palette: {
         primary: {
-          main: '#ff5252'
+          main: '#ff5252',
+          light: '#ef5350'
         }
-
       }
     },
     dark: {
       palette: {
         primary: {
-          main: '#000'
+          main: '#ef5350'
         }
-
       }
     }
   }

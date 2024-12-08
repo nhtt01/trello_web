@@ -27,10 +27,10 @@ function AppBar() {
         justifyContent:'space-between'
       }}
     >
-      <Box sx={{ display: 'flex', alignItems: 'center', gap:2 }}>
+      <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap:2 }}>
         <AppsIcon sx={{ color:'primary.main' }}/>
         <Box sx={{ display: 'flex', alignItems: 'center', gap:0.5 }}>
-          <SvgIcon component={TrelloIcon} inheritViewBox fontSize="small" sx={{ color:'primary.main' }}/>
+          <SvgIcon component={TrelloIcon} fontSize='small' inheritViewBox sx={{ color:'primary.main' }}/>
           <Typography variant='span' sx={{ fontSize:'1.5rem', fontWeight:'bold', color:'primary.main' }}>Trello</Typography>
         </Box>
         <WorkSpace/>
@@ -43,12 +43,12 @@ function AppBar() {
         <TextField id="outlined-search" label="Search..." size='small' type="search" />
         <ModelSelect />
         <Tooltip title="Notification">
-          <Badge color="secondary" variant="dot" sx={{ cursor:'pointer' }} >
+          <Badge color="secondary" variant="dot" sx={{ cursor:'pointer', color:'primary.main' }} >
             <NotificationsNoneIcon />
           </Badge>
         </Tooltip>
         <Tooltip title="Help">
-          <HelpOutlineIcon sx={{ cursor:'pointer' }}/>
+          <HelpOutlineIcon sx={{ cursor:'pointer', color:'primary.main' }}/>
         </Tooltip>
         <Profile/>
       </Box>
