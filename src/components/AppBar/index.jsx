@@ -18,13 +18,15 @@ import Profile from './Menus/Profile'
 function AppBar() {
   return (
     <Box
-      px={2}
       sx={{
         width: '100%',
         height: (theme) => theme.trelloCustom.appBarHeight,
         display: 'flex',
         alignItems: 'center',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+        gap: 2,
+        overflow:'auto',
+        paddingX: 2
       }}
     >
       <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap:2 }}>
