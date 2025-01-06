@@ -16,47 +16,28 @@ const theme = extendTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: ({ theme }) => ({
-          color: theme.palette.primary.main,
+          // color: theme.palette.primary.main,
           fontSize: '0.875rem'
         })
       }
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: ({ theme }) => ({
-          color: theme.palette.primary.main,
+        root: {
           fontSize: '0.875rem',
-          '.MuiOutlinedInput-notchedOutline': {
-            borderColor: theme.palette.primary.light
-          },
-          '&:hover':{
-            '.MuiOutlinedInput-notchedOutline': {
-              borderColor: theme.palette.primary.main
-            }
-          },
           '& fieldset':{
+            borderWidth: '0.5px !important'
+          },
+          '&:hover fieldset':{
+            borderWidth: '1px !important'
+          },
+          '&.Mui-focused fieldset':{
             borderWidth: '1px !important'
           }
-        })
+        }
       }
     }
   },
-  colorSchemes: {
-    light: {
-      palette: {
-        primary: {
-          main: '#ff5252',
-          light: '#ef5350'
-        }
-      }
-    },
-    dark: {
-      palette: {
-        primary: {
-          main: '#ef5350'
-        }
-      }
-    }
-  }
+  colorSchemes: { }
 })
 export default theme
