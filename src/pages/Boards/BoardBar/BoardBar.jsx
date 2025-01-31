@@ -35,7 +35,6 @@ function BoardBar() {
         justifyContent:'space-between',
         gap: 2,
         overflow:'auto',
-        borderBottom: '1px solid #00bfa5',
         paddingX: 2,
         bgcolor:(theme) => (theme.palette.mode === 'dark' ? '#34495e': '#1976d2')
       }}
@@ -89,15 +88,17 @@ function BoardBar() {
               width:34,
               height:34,
               fontSize:16,
-              border:'none'
+              border:'none',
+              color:'white',
+              cursor:'pointer'
             }
           }}
         >
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-          <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
-          <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
-          <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
-          <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+          <Avatar alt="Remy Sharp" src="https://picsum.photos/300/300" />
+          <Avatar alt="Travis Howard" src="https://picsum.photos/300/301" />
+          <Avatar alt="Cindy Baker" src="https://picsum.photos/300/302" />
+          <Avatar alt="Agnes Walker" src="https://picsum.photos/300/303" />
+          <Avatar alt="Trevor Henderson" src="https://picsum.photos/300/303" />
         </AvatarGroup>
       </Box>
     </Box>

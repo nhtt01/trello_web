@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Box from '@mui/material/Box'
-import ModelSelect from '~/components/ModelSelect'
+import ModelSelect from '~/components/ModelSelect/ModelSelect'
 import AppsIcon from '@mui/icons-material/Apps'
 import SvgIcon from '@mui/material/SvgIcon'
 import InputAdornment from '@mui/material/InputAdornment'
@@ -20,7 +20,7 @@ import Tooltip from '@mui/material/Tooltip'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import Profile from './Menus/Profile'
 function AppBar() {
-  const [searchValue,setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState('')
   return (
     <Box
       sx={{
@@ -78,7 +78,7 @@ function AppBar() {
                   fontSize: 'small',
                   cursor:  searchValue ? 'pointer' : 'default'
                 }}
-                onClick={()=>setSearchValue('')}
+                onClick={() => setSearchValue('')}
               />
             )
           }}
@@ -91,7 +91,7 @@ function AppBar() {
             '& .MuiOutlinedInput-root': {
               '& fieldset': { borderColor: 'white' },
               '&:hover fieldset': { borderColor: 'white' },
-              '&.Mui-focused fieldset': { borderColor: 'white' },
+              '&.Mui-focused fieldset': { borderColor: 'white' }
             }
           }}
         />
